@@ -2,6 +2,7 @@
   "name": "xiaomi-mi-smart-rubik-cube",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://wachino.github.io/xiaomi-mi-smart-rubik-cube/",
   "dependencies": {
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
