@@ -1,0 +1,72 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:11.13.0
+
+    working_directory: ~/xiaomi-mi-smart-rubik-cube
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          name: Restore node_modules cache
+          keys:
+            - v1-node-{{ arch }}-{{ .Branch }}-{{ checksum "package.json" }}
+            - v1-node-{{ arch }}-{{ .Branch }}-
+            - v1-node-{{ arch }}-
+
+      - run:
+          name: Nodejs Version
+          command: node --version
+
+      - run:
+          name: Install Packages
+          command: yarn
+
+      - run:
+          name: Build
+          command: yarn build
+
+      - persist_to_workspace:
+          root: build
+          paths:
+            - ./*
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-node-{{ arch }}-{{ .Branch }}-{{ checksum "package.json" }}
+
+  deploy-gh-pages:
+    docker:
+      - image: circleci/node:11.13.0
+
+    working_directory: ~/xiaomi-mi-smart-rubik-cube
+
+    steps:
+      - checkout
+
+      - attach_workspace:
+          at: build
+
+      - add_ssh_keys:
+          fingerprints:
+            - "5b:49:b4:c3:0b:ff:8a:9a:83:ef:58:a2:03:64:25:8d"
+
+      - run:
+          name: Deploy Github Pages
+          command: ./scripts/deploy-ghpages.sh build
+
+workflows:
+  version: 2
+
+  build-deploy:
+    jobs:
+      - build
+      - deploy-gh-pages:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
