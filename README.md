@@ -2,7 +2,7 @@ This project is deployed using github pages, so you can try a demo:
 
 https://wachino.github.io/xiaomi-mi-smart-rubik-cube/
 
-or watch this vide:
+or watch this video:
 
 https://youtu.be/_OYUJqmsc00
 
