@@ -6,7 +6,10 @@
   "dependencies": {
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-scripts": "3.3.0"
+    "react-scripts": "3.3.0",
+    "sr-visualizer": "^1.0.8",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -24,7 +27,6 @@
     ],
     "development": [
       "last 1 chrome version",
-      "last 1 firefox version",
       "last 1 safari version"
     ]
   }
