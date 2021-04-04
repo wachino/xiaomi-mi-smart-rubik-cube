@@ -1,7 +1,7 @@
 const SERVICE_UUID = '0000aadb-0000-1000-8000-00805f9b34fb';
 const CHARACTERISTIC_UUID = '0000aadc-0000-1000-8000-00805f9b34fb';
 
-export const isWebBluetoothSupported = 'bluetooth' in navigator;
+//export const isWebBluetoothSupported = 'bluetooth' in navigator;
 
 export const connectToBluetoothDevice = () => {
   return navigator.bluetooth

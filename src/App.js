@@ -6,6 +6,7 @@ import {
   disconnectFromBluetoothDevice
 } from './helpers/bluetooth';
 import { parseCube } from './helpers/cubeParser';
+import * as SRVisualizer from 'sr-visualizer'
 import './App.css';
 
 const faceColorMap = ['g', 'y', 'r', 'w', 'o', 'b'];
@@ -19,17 +20,21 @@ class App extends React.Component {
   componentWillUnmount() {
     disconnectFromBluetoothDevice(this.device);
   }
-
+  
   render() {
     return (
-      <div className="App">
-        <img
-          alt="Rubik cube"
-          src={`http://cube.crider.co.uk/visualcube.php?fmt=svg&r=x-90y-120x-20&size=300&fc=${this.state.cubeState}`}
-        />
+      <div className="App">        
         <div>
+          <div id="imageContainer"></div>
           <button
             onClick={async () => {
+
+              // a quick check for bluetooth support in the browser
+              if(!('bluetooth' in navigator)){
+                alert("Browser does not support bluetooth");
+                return;
+              }
+
               const { server, device } = await connectToBluetoothDevice();
               this.device = device;
               const characteristic = await startNotifications(server);
@@ -39,6 +44,9 @@ class App extends React.Component {
                   .map(faceletColor => faceColorMap[faceletColor - 1])
                   .join('');
                 this.setState({ cubeState });
+                const imgContainer = document.querySelector('#imageContainer'); 
+                imgContainer.innerHTML = "";
+                SRVisualizer.cubeSVG(imgContainer, `visualcube.php?fmt=svg&r=x-90y-120x-20&size=300&fc=${this.state.cubeState}`);
               });
               device.addEventListener('gattserverdisconnected', () => {
                 disconnectFromBluetoothDevice(device);
