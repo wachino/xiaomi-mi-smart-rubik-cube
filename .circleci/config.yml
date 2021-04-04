@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:11.13.0
+      - image: circleci/node:12.22.0
 
     working_directory: ~/xiaomi-mi-smart-rubik-cube
 
@@ -40,7 +40,7 @@ jobs:
 
   deploy-gh-pages:
     docker:
-      - image: circleci/node:11.13.0
+      - image: circleci/node:12.22.0
 
     working_directory: ~/xiaomi-mi-smart-rubik-cube
 
@@ -52,7 +52,7 @@ jobs:
 
       - add_ssh_keys:
           fingerprints:
-            - "5b:49:b4:c3:0b:ff:8a:9a:83:ef:58:a2:03:64:25:8d"
+            - 'd3:98:12:4f:1e:e9:28:e6:04:3c:19:6d:a7:40:93:c1'
 
       - run:
           name: Deploy Github Pages
@@ -69,4 +69,6 @@ workflows:
             - build
           filters:
             branches:
-              only: master
+              only:
+                - master
+                - test
