@@ -1,22 +1,20 @@
 {
   "files": {
-    "main.css": "/xiaomi-mi-smart-rubik-cube/static/css/main.b71a72dd.chunk.css",
-    "main.js": "/xiaomi-mi-smart-rubik-cube/static/js/main.8db7c672.chunk.js",
-    "main.js.map": "/xiaomi-mi-smart-rubik-cube/static/js/main.8db7c672.chunk.js.map",
-    "runtime-main.js": "/xiaomi-mi-smart-rubik-cube/static/js/runtime-main.f084cf57.js",
-    "runtime-main.js.map": "/xiaomi-mi-smart-rubik-cube/static/js/runtime-main.f084cf57.js.map",
-    "static/js/2.570ed725.chunk.js": "/xiaomi-mi-smart-rubik-cube/static/js/2.570ed725.chunk.js",
-    "static/js/2.570ed725.chunk.js.map": "/xiaomi-mi-smart-rubik-cube/static/js/2.570ed725.chunk.js.map",
+    "main.css": "/xiaomi-mi-smart-rubik-cube/static/css/main.31ea1db8.chunk.css",
+    "main.js": "/xiaomi-mi-smart-rubik-cube/static/js/main.0423c280.chunk.js",
+    "main.js.map": "/xiaomi-mi-smart-rubik-cube/static/js/main.0423c280.chunk.js.map",
+    "runtime-main.js": "/xiaomi-mi-smart-rubik-cube/static/js/runtime-main.70be89d9.js",
+    "runtime-main.js.map": "/xiaomi-mi-smart-rubik-cube/static/js/runtime-main.70be89d9.js.map",
+    "static/js/2.b1fcb79c.chunk.js": "/xiaomi-mi-smart-rubik-cube/static/js/2.b1fcb79c.chunk.js",
+    "static/js/2.b1fcb79c.chunk.js.map": "/xiaomi-mi-smart-rubik-cube/static/js/2.b1fcb79c.chunk.js.map",
     "index.html": "/xiaomi-mi-smart-rubik-cube/index.html",
-    "precache-manifest.5c3ab7b632ea377762f1b1016c9c1571.js": "/xiaomi-mi-smart-rubik-cube/precache-manifest.5c3ab7b632ea377762f1b1016c9c1571.js",
-    "service-worker.js": "/xiaomi-mi-smart-rubik-cube/service-worker.js",
-    "static/css/main.b71a72dd.chunk.css.map": "/xiaomi-mi-smart-rubik-cube/static/css/main.b71a72dd.chunk.css.map",
-    "static/js/2.570ed725.chunk.js.LICENSE": "/xiaomi-mi-smart-rubik-cube/static/js/2.570ed725.chunk.js.LICENSE"
+    "static/css/main.31ea1db8.chunk.css.map": "/xiaomi-mi-smart-rubik-cube/static/css/main.31ea1db8.chunk.css.map",
+    "static/js/2.b1fcb79c.chunk.js.LICENSE.txt": "/xiaomi-mi-smart-rubik-cube/static/js/2.b1fcb79c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.f084cf57.js",
-    "static/js/2.570ed725.chunk.js",
-    "static/css/main.b71a72dd.chunk.css",
-    "static/js/main.8db7c672.chunk.js"
+    "static/js/runtime-main.70be89d9.js",
+    "static/js/2.b1fcb79c.chunk.js",
+    "static/css/main.31ea1db8.chunk.css",
+    "static/js/main.0423c280.chunk.js"
   ]
 }
